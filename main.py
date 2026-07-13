@@ -29,7 +29,7 @@ import urllib.parse
 TOKEN = "8997322150:AAHQl9UWDum2_oNUdZmn2CdYmVz8H6PUyQ0"
 OWNER_ID = 7399488750
 ADMIN_IDS = [7399488750]
-WATERMARK = "Made By @SajagOG | @KindCoders"
+WATERMARK = "Made By @caydigitals"
 
 MAX_WORKERS = 20
 BATCH_SIZE = 10
@@ -118,7 +118,7 @@ START_MSG = (
     "[ Step 2 ] Upload .txt/.json/.zip file\n"
     "[ Step 3 ] Get results\n"
     "</code>"
-    "<a href=\"https://t.me/KindCoders\">‎ </a>"
+    "<a href=\"https://t.me/caysredirect\">‎ </a>"
 )
 
 MAIN_MARKUP = InlineKeyboardMarkup([
@@ -1309,11 +1309,11 @@ async def send_result_zip(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 for idx, line in enumerate(f, 1):
                     data = json.loads(line)
                     c = build_nftoken_str_from_data(data, idx) if mode == 'nftoken' else build_export_str_from_data(data, idx)
-                    zf.writestr(f"{'nftoken' if mode == 'nftoken' else 'cookie'}_{idx}_@SajagOG.txt", c)
+                    zf.writestr(f"{'nftoken' if mode == 'nftoken' else 'cookie'}_{idx}_@cydigitals.txt", c)
         else:
             for idx, (nm, dd) in enumerate(hits.items(), 1):
                 c = build_nftoken_str(dd, idx) if mode == 'nftoken' else build_export_str(dd, idx)
-                zf.writestr(f"{'nftoken' if mode == 'nftoken' else 'cookie'}_{idx}_@SajagOG.txt", c)
+                zf.writestr(f"{'nftoken' if mode == 'nftoken' else 'cookie'}_{idx}_@caydigitals.txt", c)
     
     buf.seek(0)
     fn = "NF_Tokens.zip" if mode == 'nftoken' else "Netflix_Hits.zip"

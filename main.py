@@ -112,14 +112,15 @@ NFTOKEN_HEADERS = {
 requests.packages.urllib3.disable_warnings(category=InsecureRequestWarning)
 
 START_MSG = (
-    "<code>\n"
+    "<code>"
     " █ NETFLIX MULTI-TOOL BOT █\n\n"
     "[ Step 1 ] Choose mode below\n"
     "[ Step 2 ] Upload .txt/.json/.zip file\n"
-    "[ Step 3 ] Get results\n"
-    "</code>"
-    "<a href=\"https://t.me/caysredirect\">‎ </a>"
+    "[ Step 3 ] Get results"
+    "</code>\n"
+    '<a href="https://t.me/caysredirect"></a>'
 )
+
 
 MAIN_MARKUP = InlineKeyboardMarkup([
     [InlineKeyboardButton("🔍 Check Account", callback_data="mode_check"),
@@ -782,7 +783,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
             await update.message.reply_html("⚠️ Already processing. Please stop first.", reply_markup=STOP_MARKUP)
             return
         user_state[user_id] = {'mode': 'check', 'cookies': [], 'stop': False, 'busy': False}
-        await update.message.reply_html(START_MSG, reply_markup=MAIN_MARKUP)
+        await update.message.reply_html(START_MSG, reply_markup=MAIN_MARKUP,disable_web_page_preview=False)
 
 async def mode_button(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query

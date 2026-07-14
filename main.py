@@ -112,13 +112,13 @@ NFTOKEN_HEADERS = {
 requests.packages.urllib3.disable_warnings(category=InsecureRequestWarning)
 
 START_MSG = (
+    '<a href="https://t.me/caysredirect"> </a>'
     "<code>"
     " █ NETFLIX MULTI-TOOL BOT █\n\n"
     "[ Step 1 ] Choose mode below\n"
     "[ Step 2 ] Upload .txt/.json/.zip file\n"
     "[ Step 3 ] Get results"
     "</code>\n"
-    '<a href="https://t.me/caysredirect"> </a>'
 )
 
 MAIN_MARKUP = InlineKeyboardMarkup([

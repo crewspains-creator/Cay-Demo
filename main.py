@@ -117,7 +117,7 @@ START_MSG = (
     "[ Step 1 ] Choose mode below\n"
     "[ Step 2 ] Upload .txt/.json/.zip file\n"
     "[ Step 3 ] Get results"
-    "</code>"
+    "</code>\n"
     "<a href=\"https://t.me/caysredirect\">‎ </a>"
 )
 

@@ -782,7 +782,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
             await update.message.reply_html("⚠️ Already processing. Please stop first.", reply_markup=STOP_MARKUP)
             return
         user_state[user_id] = {'mode': 'check', 'cookies': [], 'stop': False, 'busy': False}
-        await update.message.reply_html(START_MSG, reply_markup=MAIN_MARKUP)
+        await update.message.reply_html(START_MSG, reply_markup=MAIN_MARKUP, disable_web_page_preview=false)
 
 async def mode_button(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query

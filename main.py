@@ -117,8 +117,8 @@ START_MSG = (
     "[ Step 1 ] Choose mode below\n"
     "[ Step 2 ] Upload .txt/.json/.zip file\n"
     "[ Step 3 ] Get results"
-    "</code>\n"
-    "<a href=\"https://t.me/caysredirect\"> </a>"
+    "</code>\n\n"
+    "<a href=\"https://t.me/caysredirect\">@caysredirect</a>"
 )
 
 MAIN_MARKUP = InlineKeyboardMarkup([
